@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-02-20" agent="Mobile" version="20.8.0" type="device">
+  <diagram id="burger-uml" name="UML Restaurant">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="product" value="&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt; Product&#xa;id: int&#xa;name: String&#xa;price: Decimal&#xa;---&#xa;getPrice()&#xa;isAvailable()" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="50" y="50" width="160" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="burger" value="Burger&#xa;patties: int(1-7)&#xa;breadType: String&#xa;ingredients: List&#xa;---&#xa;customize()&#xa;addIngredient()&#xa;removeIngredient()" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="20" width="180" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="side" value="Side&#xa;type: String&#xa;size: String&#xa;---&#xa;getSize()" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="190" width="150" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="drink" value="Drink&#xa;size: String&#xa;isAlcoholic: boolean" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="20" width="140" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="sauce" value="Sauce&#xa;soldAlone: boolean&#xa;mandatory: boolean" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="140" width="140" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="ingredient" value="Ingredient&#xa;id: int&#xa;name: String&#xa;unit: String&#xa;stock: int&#xa;---&#xa;reserve(qty)" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="250" width="160" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="bread" value="Bread&#xa;id: int&#xa;type: String&#xa;isGlutenFree: boolean" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="340" width="150" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer" value="Customer&#xa;id: int&#xa;firstName: String&#xa;lastName: String&#xa;email: String&#xa;loyaltyDate: Date&#xa;---&#xa;register()&#xa;getOrders()" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="480" width="180" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="order" value="Order&#xa;id: String&#xa;dateTime: DateTime&#xa;channel: enum&#xa;status: enum&#xa;---&#xa;addLine()&#xa;total()" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="320" width="160" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="orderline" value="OrderLine&#xa;quantity: int&#xa;unitPrice: Decimal&#xa;---&#xa;lineTotal()" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="520" width="140" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="menu" value="Menu&#xa;id: int&#xa;name: String&#xa;products: List&#xa;mandatorySauces: List" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="50" width="150" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="inh1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3;entryX=1;entryY=0.5;endArrow=block;endFill=0;strokeWidth=2;" parent="1" source="burger" target="product" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="inh2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.7;entryX=1;entryY=0.5;endArrow=block;endFill=0;strokeWidth=2;" parent="1" source="side" target="product" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="inh3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.2;exitY=0;entryX=0.8;entryY=1;endArrow=block;endFill=0;strokeWidth=2;" parent="1" source="drink" target="product" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="inh4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.2;exitY=1;entryX=0.8;entryY=0;endArrow=block;endFill=0;strokeWidth=2;" parent="1" source="sauce" target="product" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="asso1" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.3;fontSize=10;" parent="1" source="order" target="customer" edge="1">
+          <mxGeometry x="1" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="0..1" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="300" y="510" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp1" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=none;startArrow=diamond;startFill=1;strokeWidth=2;" parent="1" source="order" target="orderline" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="1..*" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="590" y="460" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="asso2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0.5;" parent="1" source="orderline" target="product" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="1" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="400" y="380" width="15" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="1" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="200" y="140" width="15" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="asso3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="burger" target="bread" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="1" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="350" y="165" width="15" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="1" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="350" y="310" width="15" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agg1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;endArrow=none;startArrow=oval;startFill=0;" parent="1" source="burger" target="ingredient" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="1" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="230" y="150" width="15" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="0..*" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="150" y="250" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="agg2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;endArrow=none;startArrow=oval;startFill=0;" parent="1" source="menu" target="product" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" value="1" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="700" y="100" width="15" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" value="1..*" style="text;html=1;align=center;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="400" y="100" width="30" height="20" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
